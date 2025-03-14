@@ -27,7 +27,7 @@ jobs:
     - name: Move assets folder to build/
       run: |
         # Only move the 'assets' folder from public/build to build/
-        mv public/build/assets build/assets/ || true
+        mkdir -p build/assets/ && mv public/build/assets build/assets/ || true
 
         
     - name: FTP-Deploy-Action
