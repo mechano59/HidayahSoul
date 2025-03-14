@@ -22,6 +22,13 @@ jobs:
 
     - name: Install PHP dependencies
       run: composer install --no-dev --optimize-autoloader
+
+    # Move the assets folder to build/ directory, without affecting other files
+    - name: Move assets folder to build/
+      run: |
+        # Only move the 'assets' folder from public/build to build/
+        mv public/build/assets build/ || true
+
         
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
