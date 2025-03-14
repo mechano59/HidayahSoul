@@ -1,0 +1,94 @@
+:root {
+  /* Light Theme - Pastel Colors */
+  --primary-light: #7c9eb2;
+  --secondary-light: #a5c0c5;
+  --accent-light: #f2d5cf;
+  --neutral-light: #e6e4e3;
+  --background-light: #f8f5f2;
+
+  /* Dark Theme - Pastel Colors */
+  --primary-dark: #5d8a9e;
+  --secondary-dark: #7a9ea6;
+  --accent-dark: #d4b8b3;
+  --neutral-dark: #3c3836;
+  --background-dark: #282624;
+
+  /* Default to light theme */
+  --primary-color: var(--primary-light);
+  --secondary-color: var(--secondary-light);
+  --accent-color: var(--accent-light);
+  --text-color: #2d3748;
+  --background-color: var(--background-light);
+  --card-color: #ffffff;
+  --hover-color: #f0f0f0;
+  --border-color: #e2e8f0;
+  --border-radius: 10px;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  --transition: all 0.3s ease;
+}
+
+.dark {
+  --primary-color: var(--primary-dark);
+  --secondary-color: var(--secondary-dark);
+  --accent-color: var(--accent-dark);
+  --text-color: #e2e2e2;
+  --background-color: var(--background-dark);
+  --card-color: #32302f;
+  --hover-color: #3c3836;
+  --border-color: #504945;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(
+    150deg,
+    rgba(var(--primary-color-rgb), 0.05),
+    rgba(var(--secondary-color-rgb), 0.03)
+  );
+  overflow-y: auto;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+
+/* Convert hex to rgb for use in gradients */
+:root {
+  --primary-color-rgb: 124, 158, 178; /* #7c9eb2 in RGB for light theme */
+  --secondary-color-rgb: 165, 192, 197; /* #a5c0c5 in RGB for light theme */
+}
+
+.dark {
+  --primary-color-rgb: 93, 138, 158; /* #5d8a9e in RGB for dark theme */
+  --secondary-color-rgb: 122, 158, 166; /* #7a9ea6 in RGB for dark theme */
+}
+
