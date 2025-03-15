@@ -24,7 +24,7 @@ class QuranController extends Controller
                 'Content-Type' => 'application/json',
                 'Authorization' => 'Bearer ' . env('GEMINI_API_KEY'),
             ])->post(env('GEMINI_API_URL'), [
-                'model' => 'google/gemini-pro:free',  // Or your specific model
+                'model' => 'google/gemini-2.0-pro-exp-02-05:free',
                 'messages' => [
                     [
                         'role' => 'system',
@@ -73,7 +73,7 @@ class QuranController extends Controller
             'Content-Type' => 'application/json',
             'Authorization' => 'Bearer ' . env('GEMINI_API_KEY'),
         ])->post(env('GEMINI_API_URL'), [
-            'model' => 'google/gemini-pro:free',
+            'model' => 'google/gemini-2.0-pro-exp-02-05:free',
             'messages' => [
                     [
                         'role' => 'system',
