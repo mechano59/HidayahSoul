@@ -35,6 +35,9 @@ const toggleArabic = () => {
     
     <div class="verse-reflection">{{ verse.reflection }}</div>
   </div>
+  <div v-if="verse.ps" class="verse-ps">
+      {{ verse.ps }}
+    </div>
 </template>
 
 <style scoped>
@@ -131,6 +134,14 @@ const toggleArabic = () => {
   color: var(--text-color);
   position: relative;
   border-left: 3px solid var(--secondary-color);
+}
+
+.verse-ps {
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  color: red;
+  font-size: 1rem;
+  opacity: 0.85;
 }
 
 @media (max-width: 768px) {

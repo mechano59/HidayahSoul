@@ -89,6 +89,7 @@ const FALLBACK_VERSES: VerseData[] = [
     reflection:
       "When facing challenges, this verse reminds us that patience and prayer are powerful tools to find peace and guidance.",
     arabic: "وَاسْتَعِينُوا بِالصَّبْرِ وَالصَّلَاةِ ۚ وَإِنَّهَا لَكَبِيرَةٌ إِلَّا عَلَى الْخَاشِعِينَ",
+    ps: "P.S.: There is an error fetching your data. See the console log for details.",
   },
 ]
 
